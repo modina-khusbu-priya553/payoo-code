@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Login</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
+    <!-- tailwind + daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <section>
+        <div class="w-52 mx-auto pt-[200px]">
+            <img src="./assets/Logo-l.png" alt="">
+        </div>
+
+        <div class="pt-8">
+
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-md mx-auto rounded-2xl">
+
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                    <label class="label font-medium text-neutral">Mobile Number</label>
+                    <input id="input-num" type="text" class="input bg-base-200 rounded-full border-none" maxlength="11" minlength="11" 
+                        placeholder="Enter your number" />
+                    <label class="label font-medium text-neutral">4 Digit Pin</label>
+                    <input id="input-pin" type="password" class="input bg-base-200 rounded-full border-none" minlength="4" 
+                        placeholder="Enter 4 Digit Pin" />
+                    <button id="login-btn" class="btn btn-neutral mt-4 rounded-full bg-primary border-none">Login</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./script/login.js"></script>
+</body>
+</html>
