@@ -25,14 +25,16 @@
     </style>
 </head>
 <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-2 border-gray-200">
+
+    <!-- sticky: we use it so that we can scroll and top-0 means no space from top  -->
+    <header class="border-2 border-gray-200 sticky top-0 bg-base-200 z-10">
         <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
             <div class="left flex gap-2">
                 <div class="w-[60px]">
                     <img src="./assets/logo.png" alt="">
                 </div>
                 <div>
-                    <h2 class="font-extrabold text-[18px]">$<span>45000</span>
+                    <h2 class="font-extrabold text-[18px]">$<span id="balance">45000</span>
                     </h2>
                     <p class="text-neutral/50">Available Balance</p>
                 </div>
@@ -107,12 +109,7 @@
             </div>
 
     </section>
-    
-
-     
-
-
-
-    <script src="./script/login.js"></script>
+    <script src="./script/mechine.js"></script>
+    <script src="./script/cashout.js"></script>
 </body>
 </html>
