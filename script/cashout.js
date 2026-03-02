@@ -34,6 +34,35 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
             alert("Cash Out Successful!");
             // we will use setBalance function and add the newBalance value as a parameter to set the new balance after cashout
             setBalance(newBalance);
+
+                // History section
+        // 1 - get (parent) history-container
+
+        const history = document.getElementById('history-container');
+
+        // 2 - create a new div child div
+
+        const newHistory = document.createElement("div");
+
+        // 3- set innerHtml to the new div
+
+        newHistory.innerHTML = `
+        <div class="border border-base-300 bg-base-100 w-full p-4 rounded-lg 
+                shadow-sm flex justify-start gap-4 items-center">
+            <div class="rounded-full bg-base-300 w-20">
+                <img src="/assets/opt-1.png" alt="" class="p-7">
+            </div>
+            <div>
+                Cash Out ${cashOutAmount} TK from
+                ${agentNumber}
+                at ${new Date().toLocaleString()}
+            </div>
+
+        </div>         
+        
+        `;
+        history.append(newHistory);
+
         }else{
             alert("wrong pin!");
             return;

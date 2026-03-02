@@ -13,12 +13,28 @@ function getBalance(){
     const balance = balanceElement.innerText;
     return Number(balance);
 }
-
-// set balance function to update the balance after cashout, it will take a value and then set it to the balance element
+// set balance function to update the balance after cash out / cash in, it will take a value and then set it to the balance element
 function setBalance(value){
     const balanceElement = document.getElementById('balance');
-
 //we call the function, value is the new balance that we want to set it to the balance element w
     balanceElement.innerText = value;
-
 }
+
+// hide all / show after click
+
+function showOnly(id){
+    const addMoney = document.getElementById('add-money');
+    const cashOut = document.getElementById('cash-out');
+    const history = document.getElementById('history')
+
+    // hide all
+    addMoney.classList.add("hidden");
+    cashOut.classList.add("hidden");
+    history.classList.add("hidden")
+
+    // show 
+    const selected = document.getElementById(id);
+    selected.classList.remove("hidden");
+}
+
+

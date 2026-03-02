@@ -57,11 +57,11 @@
         <div class="grid grid-cols-3 gap-4 py-6">
             
             
-            <button class="btn flex-col h-full py-5 rounded-xl btn-primary btn-soft">
+            <button onclick="showOnly('add-money')" class="btn flex-col h-full py-5 rounded-xl btn-primary btn-soft">
                 <img src="./assets/opt-1.png" alt="">
                 <p class="text-neutral/50">Add Money</p>
             </button>
-            <button class="btn flex-col h-full py-5 rounded-xl btn-primary btn-soft">
+            <button onclick="showOnly('cash-out')" class="btn flex-col h-full py-5 rounded-xl btn-primary btn-soft">
                 <img src="./assets/opt-2.png" alt="">
                 <p class="text-neutral/50">Cashout</p>
             </button>
@@ -77,14 +77,53 @@
                 <img src="./assets/opt-5.png" alt="">
                 <p class="text-neutral/50">Pay Bill</p>
             </button>
-            <button class="btn flex-col h-full py-5 rounded-xl btn-primary btn-soft">
+            <button onclick="showOnly('history')" class="btn flex-col h-full py-5 rounded-xl btn-primary btn-soft">
                 <img src="./assets/opt-6.png" alt="">
                 <p class="text-neutral/50">Transactions</p>
             </button>
         </div>
     </section>
 
-    <section id="cash-out" class="w-11/12 mx-auto">
+    <!-- Add Money -->
+     <section id="add-money" class="w-11/12 mx-auto hidden">
+        <h2 class="text-xl font-bold mb-3">Add Money</h2>
+        <div class="card bg-base-100 w-full shadow rounded-2xl">
+
+            <div class="card-body">
+
+                <fieldset class="fieldset">
+
+                    <label class="label font-medium text-content text-[16px]">Select A Bank</label>
+                    <select id="add-money-bank" class="select bg-base-200 rounded-full border-none w-full">
+                    <option disabled selected>Select A Bank</option>
+                    <option>DBBL</option>
+                    <option>City Bank</option>
+                    <option>Brac Bank</option>
+                    </select>
+
+                    <label class="label font-medium text-content text-[16px]">Bank Account Number</label>
+                    <input id="add-bank-number" type="text" class="input bg-base-200 rounded-full border-none w-full" maxlength="11" minlength="11" 
+                        placeholder="Enter 11 digit number" />
+
+                    <label class="label font-medium text-content text-[16px]">Amount to Add</label>
+                    <input id="add-money-amount" type="number" class="input bg-base-200 rounded-full border-none w-full"  
+                        placeholder="Add Amount to add" />
+
+                    <label class="label font-medium text-content text-[16px]">Pin Number</label>
+                    <input id="add-money-pin" type="password" class="input bg-base-200 rounded-full border-none w-full" minlength="4" 
+                        placeholder="Enter 4 digit pin number" />
+
+                    <button id="add-money-btn" class="btn text-base-100 mt-4 rounded-full bg-primary border-none">Add Money</button>
+                </fieldset>
+            </div>
+        </div>
+
+
+     </section>
+
+
+<!-- cash out Section -->
+    <section id="cash-out" class="w-11/12 mx-auto hidden">
         <h2 class="text-xl font-bold mb-3">Cash Out</h2>
         <!-- Cash Out -->
         <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -109,7 +148,17 @@
             </div>
 
     </section>
+
+    <!-- Transaction History -->
+    <section id="history" class="w-11/12 mx-auto hidden">
+        <h2 class="text-xl font-bold mb-3">Transaction History</h2>
+        <div id="history-container" class=" space-y-5">
+        </div>
+    </section>
+
+
     <script src="./script/mechine.js"></script>
+    <script src="./script/addmoney.js"></script>
     <script src="./script/cashout.js"></script>
 </body>
 </html>
